@@ -38,6 +38,14 @@ class Misc(commands.Cog):
         thumbnail = author.avatar_url_as(size = 64)
         sniper.set_thumbnail(url=thumbnail).set_footer(text=f"Message sent by {author.name}")
         await ctx.send(embed = sniper)
+        
+    @commands.command(name = 'source', aliases = ['s', 'source-code', 'code', 'repo'], help = "Use this command to look at the source code of CursedWarden")
+    async def source(self, ctx):
+        embed = Embed(title = "CursedWarden's source code", description = "CursedWarden is a completely open-source bot whose code can be found on github", color = Color.magenta())
+        embed.add_field(name = "Find the source code on GitHub!", value = "[click here](https://github.com/Zpambot-dev/CursedWarden/tree/main) to view CursedWarden's source code")
+        embed.set_footer(text = "Feel free to do whatever you want with this code!!")
+        await ctx.send(embed = embed)
+
 
     
 
