@@ -12,7 +12,7 @@ async def on_ready():
 
     await client.change_presence(activity=discord.Game(f"$help| In {len(client.guilds)} servers"), status=discord.Status.do_not_disturb)
 
-for filename in os.listdir(r'C:\Users\Satya\Desktop\Warden\warden\src\main\cogs'):
+for filename in os.listdir('./cogs'):
     if filename.endswith('.py'):
         client.load_extension(f'cogs.{filename[:-3]}')
         
