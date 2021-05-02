@@ -18,6 +18,7 @@ class Misc(commands.Cog):
         print("Cog Misc is ready")
 
     @commands.Cog.listener()
+    @commands.guild_only()
     async def on_message_delete(self, message):
         print(f"{message.content} was deleted")
         global deletedMsg 
